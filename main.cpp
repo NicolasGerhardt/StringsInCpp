@@ -4,15 +4,31 @@
 using namespace std;
 
 int main() {
-  string greeting = "Hello, ";
-  int len = greeting.length();
-  string s2 = greeting.substr(2,3);
-  string name;
-  cout << "What is your name\n";
-  cin >> name;
-  cout << greeting << name << '\n';
-  cout << "your name is " << name.length() << " characters long" << '\n';
-  cout << "Cockney accents say '" + s2 << '\n';
-  cout << "Goodbye" << '\n';
-  return 0;
+  while (true)
+  {
+    string firstWord;
+    string secondWord;
+    cout << "Give me your first word: ";
+    cin >> firstWord;
+    cout << "Give me your second word: ";
+    cin >> secondWord;
+
+    if (firstWord.length() > secondWord.length()) 
+    {
+      cout << "first word is bigger";
+    }
+    if (firstWord.length() < secondWord.length()) 
+    {
+      cout << "second word is bigger";
+    }
+    if (firstWord.length() == secondWord.length())
+    {
+      cout << "both words are the same size";
+    }
+    cout  << '\n';
+    string quit;
+    cout << "Keep going? (yes/no)";
+    cin >> quit;
+    if (quit == "no") return 0;
+  }
 }
