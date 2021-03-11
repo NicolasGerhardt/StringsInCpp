@@ -9,9 +9,12 @@ int main() {
     string firstWord;
     string secondWord;
     cout << "Give me your first word: ";
-    cin >> firstWord;
+    // cin >> firstWord;
+    getline(cin, firstWord);
     cout << "Give me your second word: ";
-    cin >> secondWord;
+    // cin >> secondWord;
+    getline(cin, secondWord);
+
 
     if (firstWord.length() > secondWord.length()) 
     {
@@ -27,8 +30,9 @@ int main() {
     }
     cout  << '\n';
     string quit;
-    cout << "Keep going? (yes/no)";
-    cin >> quit;
+    cout << "Keep going? (yes/no) ";
+    // cin >> quit;
+    getline(cin, quit);
     if (quit == "no") return 0;
   }
 }
